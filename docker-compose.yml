@@ -7,11 +7,8 @@ services:
       - /var/lib/postgresql/data/
     env_file:
       - .env
-
   web:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: qzonic/itfox:latest
     restart: always
     volumes:
       - static_value:/app/static/
