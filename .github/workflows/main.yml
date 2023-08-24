@@ -30,7 +30,7 @@ jobs:
         echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
         echo DB_HOST=${{ secrets.DB_HOST }} >> .env
         echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-        docker-compose up -d
+        docker-compose up -d --build
         docker-compose exec web python3 manage.py test
         # # перейти в папку, содержащую manage.py — 
         # cd itfox/
