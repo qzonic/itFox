@@ -17,7 +17,7 @@ load_dotenv()
 SECRET_KEY = getenv('SECRET_KEY', default='secret_key_for_cicd-autotest')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
