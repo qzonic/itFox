@@ -4,38 +4,28 @@ on: [push]
 
 jobs:
 
-  # tests:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: Set up Python 
-  #     uses: actions/setup-python@v2
-  #     with:
-  #       python-version: 3.9
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
 
-  #   - name: Install dependencies
-  #     run: | 
-  #       # обновление pip
-  #       python -m pip install --upgrade pip
-  #       # установка зависимостей
-  #       pip install -r requirements.txt 
+    - name: Install dependencies
+      run: | 
+        # обновление pip
+        python -m pip install --upgrade pip
+        # установка зависимостей
+        pip install -r requirements.txt 
 
-  #   - name: Test with django tests
-  #     run: |
-  #       touch .env
-  #       echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-  #       echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
-  #       echo DB_NAME=${{ secrets.DB_NAME }} >> .env
-  #       echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
-  #       echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
-  #       echo DB_HOST=${{ secrets.DB_HOST }} >> .env
-  #       echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-  #       docker-compose up -d --build
-  #       docker-compose exec web python3 manage.py test
-  #       # # перейти в папку, содержащую manage.py — 
-  #       # cd itfox/
-  #       # # запустить написанные разработчиком тесты
-  #       # python manage.py test
+    - name: Test with django tests
+      run: |
+        # # перейти в папку, содержащую manage.py — 
+        # cd itfox/
+        # # запустить написанные разработчиком тесты
+        # python manage.py test
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
