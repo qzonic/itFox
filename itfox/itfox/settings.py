@@ -77,7 +77,7 @@ DATABASES = {
         'NAME': getenv('DB_NAME', default='pythondigest'),
         'USER': getenv('POSTGRES_USER', default='pythondigest'),
         'PASSWORD': getenv('POSTGRES_PASSWORD', default='debug'),
-        'HOST': getenv('DB_HOST', default='postgres'),
+        'HOST': getenv('DB_HOST', default='127.0.0.1'),
         'PORT': getenv('DB_PORT', default=5432)
     }
 }
