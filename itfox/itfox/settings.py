@@ -124,10 +124,6 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    'http://94.241.171.209'
-]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
