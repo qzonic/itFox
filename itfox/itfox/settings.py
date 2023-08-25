@@ -17,14 +17,9 @@ load_dotenv()
 SECRET_KEY = getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    '94.241.171.209',
-    '127.0.0.1',
-    'localhost',
-    'web',
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
