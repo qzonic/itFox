@@ -1,6 +1,6 @@
 openapi: 3.0.2
 info:
-  title: 'VK Test API'
+  title: 'ItFox API'
   version: 'v1'
   description: |
     Запросы к API начинаются с `/api/v1/`
@@ -122,8 +122,8 @@ paths:
 
   /api/v1/news/:
     get:
-      operationId: Список книг
-      description: "Просмотр списка книг с указанием авторов"
+      operationId: Список новостей
+      description: "Просмотр списка новостей"
       parameters: [ ]
       responses:
         '200':
