@@ -6,17 +6,16 @@ jobs:
 
   tests:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:13.0-alpine
-        ports:
-          - "5432:5432"
-        env:
-          POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432
-          POSTGRES_DB: pythondigest
-          POSTGRES_USER: pythondigest
-          POSTGRES_PASSWORD: debug
+    # services:
+    #   postgres:
+    #     image: postgres:13.0-alpine
+    #     ports:
+    #       - "5432:5432"
+    #     env:
+    #       POSTGRES_PORT: 5432
+    #       POSTGRES_DB: pythondigest
+    #       POSTGRES_USER: pythondigest
+    #       POSTGRES_PASSWORD: debug
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 
