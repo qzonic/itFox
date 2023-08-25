@@ -1,3 +1,4 @@
+# CI/CD
 ![Workflow](https://github.com/qzonic/itFox/actions/workflows/main.yml/badge.svg)
 
 # Стек
