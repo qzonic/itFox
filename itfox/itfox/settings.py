@@ -14,7 +14,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = getenv('SECRET_KEY')
+SECRET_KEY = getenv('SECRET_KEY', default='secret_key_for_cicd-autotest')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -73,12 +73,12 @@ WSGI_APPLICATION = 'itfox.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': getenv('DB_ENGINE'),
-        'NAME': getenv('DB_NAME'),
-        'USER': getenv('POSTGRES_USER'),
-        'PASSWORD': getenv('POSTGRES_PASSWORD'),
-        'HOST': getenv('DB_HOST'),
-        'PORT': getenv('DB_PORT')
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': getenv('DB_NAME', default='pythondigest'),
+        'USER': getenv('POSTGRES_USER', default='pythondigest'),
+        'PASSWORD': getenv('POSTGRES_PASSWORD', default='debug'),
+        'HOST': getenv('DB_HOST', default='postgres'),
+        'PORT': getenv('DB_PORT', default=5432)
     }
 }
 
